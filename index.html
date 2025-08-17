@@ -12,7 +12,7 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">Diya<span class="highlight">.</span></div>
+            <div class="nav-logo">Diya.</div>
             <ul class="nav-menu">
                 <li class="nav-item">
                     <a href="#home" class="nav-link">Home</a>
@@ -130,30 +130,39 @@
             </p>
             
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card" data-project="eventloop">
                     <div class="project-image">
                         <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="EventLoop Platform">
                         <span class="year-badge">2024</span>
+                        <div class="project-overlay">
+                            <i class="fas fa-eye"></i>
+                            <span>View Details</span>
+                        </div>
                     </div>
                     <div class="project-content">
                         <h3>EventLoop Platform</h3>
                         <p class="project-type">Web Application</p>
                         <p class="project-description">
                             A comprehensive event management platform designed for seamless event discovery, 
-                            registration, and management with intuitive user...
+                            registration, and management with intuitive user experience.
                         </p>
                         <div class="project-tags">
                             <span class="tag">UI Design</span>
                             <span class="tag">UX Research</span>
                             <span class="tag">Prototyping</span>
                         </div>
+                        <button class="view-project-btn">View Project</button>
                     </div>
                 </div>
                 
-                <div class="project-card">
+                <div class="project-card" data-project="restaurant">
                     <div class="project-image">
                         <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Restaurant App Interface">
                         <span class="year-badge">2024</span>
+                        <div class="project-overlay">
+                            <i class="fas fa-eye"></i>
+                            <span>View Details</span>
+                        </div>
                     </div>
                     <div class="project-content">
                         <h3>Restaurant App Interface</h3>
@@ -167,26 +176,32 @@
                             <span class="tag">UI/UX</span>
                             <span class="tag">Food & Beverage</span>
                         </div>
+                        <button class="view-project-btn">View Project</button>
                     </div>
                 </div>
                 
-                <div class="project-card">
+                <div class="project-card" data-project="college-events">
                     <div class="project-image">
                         <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="College Events Management">
                         <span class="year-badge">2024</span>
+                        <div class="project-overlay">
+                            <i class="fas fa-eye"></i>
+                            <span>View Details</span>
+                        </div>
                     </div>
                     <div class="project-content">
                         <h3>College Events Management</h3>
                         <p class="project-type">Educational Platform</p>
                         <p class="project-description">
                             Complete college event management system with admin dashboard, user registration, 
-                            and event categorization features for seamless event...
+                            and event categorization features for seamless event coordination.
                         </p>
                         <div class="project-tags">
                             <span class="tag">Web Design</span>
                             <span class="tag">Dashboard</span>
                             <span class="tag">Event Management</span>
                         </div>
+                        <button class="view-project-btn">View Project</button>
                     </div>
                 </div>
             </div>
@@ -400,11 +415,44 @@
                 </div>
             </div>
         </div>
-    </footer>
+        </footer>
 
-
+    <!-- Project Modal -->
+    <div id="projectModal" class="project-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <img id="modalImage" src="" alt="Project Image">
+                <div class="modal-header-content">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalType"></p>
+                    <span id="modalYear" class="year-badge"></span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Project Overview</h3>
+                    <p id="modalDescription"></p>
+                </div>
+                <div class="modal-section">
+                    <h3>Technologies & Tools</h3>
+                    <div id="modalTags" class="project-tags"></div>
+                </div>
+                <div class="modal-section">
+                    <h3>Key Features</h3>
+                    <ul id="modalFeatures"></ul>
+                </div>
+                <div class="modal-section">
+                    <h3>Design Process</h3>
+                    <p id="modalProcess"></p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" id="modalCloseBtn">Close</button>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
 </html>
-
