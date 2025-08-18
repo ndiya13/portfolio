@@ -372,12 +372,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const images = document.querySelectorAll('img');
     
     images.forEach(img => {
-        img.addEventListener('load', function() {
-            this.style.opacity = '1';
-        });
-        
-        img.style.opacity = '0';
+        // Set images to be visible immediately
+        img.style.opacity = '1';
         img.style.transition = 'opacity 0.3s ease';
+        
+        // Optional: Add error handling
+        img.addEventListener('error', function() {
+            console.error('Failed to load image:', this.src);
+        });
     });
 
     // Add intersection observer for fade-in animations
