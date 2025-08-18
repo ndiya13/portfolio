@@ -465,6 +465,43 @@ section {
      background: #2f855a;
  }
 
+.project-buttons {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.view-project-btn {
+    flex: 1;
+    margin-top: 0;
+}
+
+.figma-btn {
+    background: #f24e1e;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.figma-btn:hover {
+    background: #d13d1a;
+    color: white;
+    text-decoration: none;
+}
+
+.figma-btn i {
+    font-size: 1rem;
+}
+
 /* Skills Section */
 .skills-section {
     background: #fff;
